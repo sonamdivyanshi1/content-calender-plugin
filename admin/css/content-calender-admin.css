@@ -17,12 +17,15 @@
 form {
     display: inline-flex;
     flex-flow: row wrap;
+    
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
 }
-
+form div{
+    display: block;
+}
 label,
 input,
 select {
