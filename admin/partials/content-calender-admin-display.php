@@ -20,7 +20,9 @@
 function my_form()
 {
 
-?> <h1 class="heading">Content Calender</h1>
+?> 
+<h1 class="heading">Content Calender</h1>
+<hr>
 	<form action="" method="POST">
 
 		<div>
