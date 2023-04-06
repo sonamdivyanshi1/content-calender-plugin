@@ -58,28 +58,7 @@ class Content_Calender_Admin {
 		require_once("C:\Users\wwwso\Local Sites\wordpress\app\public\wp-content\plugins\content-calender\admin\partials\content-calender-admin-display.php");
 	}
 
-	function wp_normalize_path( $path ) {
-		$wrapper = '';
 	
-		if ( wp_is_stream( $path ) ) {
-			list( $wrapper, $path ) = explode( '://', $path, 2 );
-	
-			$wrapper .= '://';
-		}
-	
-		// Standardize all paths to use '/'.
-		$path = str_replace( '\\', '/', $path );
-	
-		// Replace multiple slashes down to a singular, allowing for network shares having two slashes.
-		$path = preg_replace( '|(?<=.)/+|', '/', $path );
-	
-		// Windows paths should uppercase the drive letter.
-		if ( ':' === substr( $path, 1, 1 ) ) {
-			$path = ucfirst( $path );
-		}
-	
-		return $wrapper . $path;
-	}
 	
 
 	/**
